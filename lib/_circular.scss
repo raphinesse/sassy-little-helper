@@ -1,0 +1,24 @@
+// Circular stuff
+@mixin circle($radius) {
+  $diameter: $radius * 2;
+  width: $diameter;
+  height: $diameter;
+  border-radius: $radius;
+}
+
+@mixin semi-circle($radius, $part) {
+  $diameter: $radius * 2;
+  @if index(top bottom, $part) {
+    height: $radius;
+    width: $diameter;
+    @each $side in left, right {
+      border-#{$part}-#{$side}-radius: $diameter;
+    }
+  } @else {
+    height: $diameter;
+    width: $radius;
+    @each $side in top, bottom {
+      border-#{$side}-#{$part}-radius: $diameter;
+    }
+  }
+}

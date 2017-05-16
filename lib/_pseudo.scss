@@ -1,0 +1,15 @@
+// Mixins to make rules for pseudo elements more meaningful
+@mixin pseudo($type) {
+  &::#{$type} {
+    content: '';
+    @content;
+  }
+}
+
+@mixin before($args...) {
+  @include pseudo(before) { @content; }
+}
+
+@mixin after($args...) {
+  @include pseudo(after) { @content; }
+}

@@ -1,0 +1,6 @@
+// Mixin for element size from
+// https://codepen.io/ricardozea/pen/hftIe
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
