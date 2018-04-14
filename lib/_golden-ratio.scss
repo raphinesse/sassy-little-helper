@@ -1,0 +1,7 @@
+$gr-phi: 1.6180339887498948482;
+
+@function gr-segments($size) {
+  $small-segment: $size / ($gr-phi + 1);
+  $large-segment: $size - $small-segment;
+  @return (small: $small-segment, large: $large-segment);
+} 
