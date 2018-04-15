@@ -1,6 +1,6 @@
 {
   "name": "sassy-little-helper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "_all.scss",
   "repository": "git@github.com:raphinesse/sassy-little-helper.git",
   "author": "Raphael von der Grün <raphinesse@gmail.com>",
